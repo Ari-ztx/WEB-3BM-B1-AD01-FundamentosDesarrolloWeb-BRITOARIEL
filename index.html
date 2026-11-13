@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Llano Grande | AutoService</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script defer src="js/sistema.js"></script>
+</head>
+
+<body>
+<header>
+    <nav class="navbar navbar-expand-xl bg-dark" data-bs-theme="dark" aria-label="Navegación principal">
+        <div class="container">
+            <a class="navbar-brand" href="#inicio" aria-label="Llano Grande AutoService, inicio">
+                <span>Llano Grande</span>
+                <small>AutoService</small>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#menuPrincipal" aria-controls="menuPrincipal"
+                    aria-expanded="false" aria-label="Mostrar u ocultar el menú">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menuPrincipal">
+                <div class="navbar-nav ms-auto align-items-xl-center gap-xl-1">
+                    <a class="nav-link" href="#inicio">Inicio</a>
+                    <a class="nav-link" href="#servicios">Servicios</a>
+                    <a class="nav-link" href="#acerca">Acerca de</a>
+                    <a class="btn btn-primary btn-agendar" href="solicitud.html">Solicitar mantenimiento</a>
+                    <a class="nav-link" href="login.html" data-solo-invitado>Iniciar sesión</a>
+                    <div class="nav-item dropdown" data-solo-sesion hidden>
+                        <button class="nav-link dropdown-toggle" type="button" id="menuCuenta"
+                                data-bs-toggle="dropdown" aria-expanded="false">Mi cuenta</button>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="menuCuenta">
+                            <li><a class="dropdown-item" href="cliente.html">Mi perfil y mantenimientos</a></li>
+                            <li data-solo-admin hidden><a class="dropdown-item" href="administrador.html">Administración</a></li>
+                            <li><button class="dropdown-item" type="button" data-cerrar-sesion>Cerrar sesión</button></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main>
+    <section id="inicio" class="inicio">
+        <div class="container">
+            <div class="inicio-contenido">
+                <h1>Llano Grande | AutoService</h1>
+                <p>Mantenimiento preventivo y reparación automotriz para cuidar tu vehículo.</p>
+                <div class="d-flex flex-wrap gap-3 mt-4">
+                    <a class="btn btn-primary btn-lg" href="solicitud.html">Solicitar mantenimiento</a>
+                    <a class="btn btn-outline-light btn-lg" href="#servicios">Ver servicios</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section id="servicios" class="seccion bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">Nuestros servicios</h2>
+
+            <div class="row g-4">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <article class="card h-100">
+                        <img src="imagenes/cambio-aceite.jpg"
+                             class="card-img-top"
+                             alt="Cambio de aceite de un motor"
+                             loading="lazy">
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="h5">Cambio de aceite</h3>
+                            <p class="card-text">Cambio de aceite y filtros para proteger el motor.</p>
+                            <a class="btn btn-primary btn-sm mt-auto align-self-start"
+                               href="solicitud.html?servicio=Cambio%20de%20aceite"
+                               aria-label="Agendar Cambio de aceite">Agendar</a>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <article class="card h-100">
+                        <img src="imagenes/frenos.jpg"
+                             class="card-img-top"
+                             alt="Disco de freno de un vehículo"
+                             loading="lazy">
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="h5">Sistema de frenos</h3>
+                            <p class="card-text">Revisión de pastillas, discos y líquido de frenos.</p>
+                            <a class="btn btn-primary btn-sm mt-auto align-self-start"
+                               href="solicitud.html?servicio=Sistema%20de%20frenos"
+                               aria-label="Agendar Sistema de frenos">Agendar</a>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <article class="card h-100">
+                        <img src="imagenes/mecanica-general.jpg"
+                             class="card-img-top"
+                             alt="Revisión del motor de un vehículo en el taller"
+                             loading="lazy">
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="h5">Mecánica general</h3>
+                            <p class="card-text">Diagnóstico y reparación de componentes del vehículo.</p>
+                            <a class="btn btn-primary btn-sm mt-auto align-self-start"
+                               href="solicitud.html?servicio=Mec%C3%A1nica%20general"
+                               aria-label="Agendar Mecánica general">Agendar</a>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <article class="card h-100">
+                        <img src="imagenes/sistema-electrico.jpg"
+                             class="card-img-top"
+                             alt="Batería del sistema eléctrico de un vehículo"
+                             loading="lazy">
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="h5">Sistema eléctrico</h3>
+                            <p class="card-text">Revisión de batería, alternador y cableado.</p>
+                            <a class="btn btn-primary btn-sm mt-auto align-self-start"
+                               href="solicitud.html?servicio=Sistema%20el%C3%A9ctrico"
+                               aria-label="Agendar Sistema eléctrico">Agendar</a>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <article class="card h-100">
+                        <img src="imagenes/diagnostico-electronico.jpg"
+                             class="card-img-top"
+                             alt="Escáner conectado a un vehículo para revisar fallas"
+                             loading="lazy">
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="h5">Diagnóstico electrónico</h3>
+                            <p class="card-text">Detección de fallas mediante un escáner automotriz.</p>
+                            <a class="btn btn-primary btn-sm mt-auto align-self-start"
+                               href="solicitud.html?servicio=Diagn%C3%B3stico%20electr%C3%B3nico"
+                               aria-label="Agendar Diagnóstico electrónico">Agendar</a>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <article class="card h-100">
+                        <img src="imagenes/suspension.jpg"
+                             class="card-img-top"
+                             alt="Amortiguador y resorte de la suspensión de un vehículo"
+                             loading="lazy">
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="h5">Suspensión</h3>
+                            <p class="card-text">Revisión de amortiguadores y del sistema de dirección.</p>
+                            <a class="btn btn-primary btn-sm mt-auto align-self-start"
+                               href="solicitud.html?servicio=Suspensi%C3%B3n"
+                               aria-label="Agendar Suspensión">Agendar</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="acerca" class="seccion">
+        <div class="container">
+            <div class="row g-4 align-items-center">
+                <div class="col-lg-6">
+                    <figure class="mb-0">
+                        <img src="imagenes/equipo-taller.jpg" class="imagen-taller"
+                             alt="Dos mecánicos revisando el motor de un vehículo" loading="lazy"
+                             width="1448" height="1086">
+                        <figcaption class="text-body-secondary small mt-2"></figcaption>
+                    </figure>
+                </div>
+                <div class="col-lg-6">
+                    <h2>Acerca de nosotros</h2>
+                    <p>En Llano Grande | AutoService nos dedicamos al mantenimiento preventivo
+                        y correctivo de vehículos. Nuestros servicios abarcan el cuidado del motor,
+                        los frenos, la suspensión y los sistemas eléctricos y electrónicos.</p>
+                    <p>El mantenimiento preventivo permite revisar el vehículo y detectar señales
+                        de desgaste. El correctivo se enfoca en diagnosticar y reparar fallas.</p>
+                    <a class="btn btn-outline-primary" href="#servicios">Conocer los servicios</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="solicitud" class="seccion py-4">
+        <div class="container">
+            <h2>Solicitud de mantenimiento</h2>
+            <p>Completa los datos de tu vehículo y elige el servicio que necesitas.</p>
+            <a class="btn btn-primary" href="solicitud.html">Abrir formulario</a>
+        </div>
+    </section>
+</main>
+
+<footer class="footer text-center">
+    <div class="container">
+        <p class="mb-0">© 2026 Llano Grande | AutoService - Todos los derechos reservados.</p>
+    
+        <nav class="redes-sociales mt-3" aria-label="Redes sociales">
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"
+               aria-label="Facebook (abre en una pestaña nueva)">
+                <img src="imagenes/redes/facebook.svg" alt="" width="24" height="24">
+            </a>
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"
+               aria-label="Instagram (abre en una pestaña nueva)">
+                <img src="imagenes/redes/instagram.svg" alt="" width="24" height="24">
+            </a>
+            <a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer"
+               aria-label="TikTok (abre en una pestaña nueva)">
+                <img src="imagenes/redes/tiktok.svg" alt="" width="24" height="24">
+            </a>
+        </nav>
+    </div>
+</footer>
+</body>
+</html>

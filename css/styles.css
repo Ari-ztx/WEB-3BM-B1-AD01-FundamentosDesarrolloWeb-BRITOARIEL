@@ -1,0 +1,192 @@
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #212529;
+}
+.navbar{
+    padding: 15px 0;
+}
+.navbar-brand{
+    font-size: 24px;
+}
+.nav-link{
+    margin-left: 15px;
+
+}
+.nav-link:hover{
+    color: #0d6efd !important;
+}
+
+.inicio{
+    background: linear-gradient(90deg, rgba(8, 21, 35, 0.94), rgba(8, 21, 35, 0.32)),
+                url('../imagenes/portada-taller.jpg') center / cover;
+    color: white;
+    padding: 110px 0;
+    min-height: 520px;
+    display: flex;
+    align-items: center;
+}
+.inicio h1{
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-weight: bold;
+    line-height: 1.12;
+}
+.inicio p{
+    font-size: 20px;
+    margin-top: 20px;
+}
+.seccion{
+    padding: 70px 20px;
+}
+.seccion h2{
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+#servicios .card:hover{
+    transform: translate(-5px);
+}
+.card-body{
+    padding: 25px;
+}
+.card h3{
+    color: #0d6efd;
+}
+.footer{
+    background-color: #212529;
+    color: white;
+    padding: 25px 0;
+}
+@media (max-width: 768px){
+    .inicio{
+        padding: 70px 15px;
+    }
+    .inicio h1{
+        font-size: 30px;
+    }
+}
+#servicios .card-img-top {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+.detalle-solicitud {
+    white-space: pre-line;
+    text-align: left;
+    overflow-wrap: anywhere;
+}
+
+.table td {
+    min-width: 7rem;
+    overflow-wrap: anywhere;
+}
+
+@media (max-width: 1199px) {
+    .navbar .nav-link {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 575px) {
+    .navbar-brand {
+        font-size: 18px;
+    }
+}
+
+.redes-sociales {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.redes-sociales a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border: 1px solid #adb5bd;
+    border-radius: 50%;
+}
+
+.redes-sociales img {
+    filter: brightness(0) invert(1);
+}
+
+.redes-sociales a:hover {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+}
+
+.redes-sociales a:focus-visible {
+    outline: 3px solid #ffda6a;
+    outline-offset: 3px;
+}
+
+#acerca p,
+#servicios .card-text {
+    font-size: 1.125rem;
+    line-height: 1.65;
+}
+
+.navbar-brand {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.15;
+}
+
+.navbar-brand span {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.navbar-brand small {
+    margin-top: 4px;
+    font-size: 0.8rem;
+    letter-spacing: 0.12em;
+}
+
+.navbar .nav-link {
+    margin-left: 0;
+}
+
+.navbar .btn-agendar {
+    margin: 8px;
+    padding: 10px 16px;
+    align-self: flex-start;
+    white-space: nowrap;
+}
+
+.inicio-contenido {
+    max-width: 38rem;
+}
+
+.imagen-taller {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+
+
+
+
+@media (max-width: 767px) {
+    .inicio {
+        padding: 64px 0;
+        min-height: 460px;
+        background-position: 65% center;
+    }
+
+    .seccion {
+        padding: 48px 8px;
+    }
+
+    .navbar .btn-agendar {
+        margin-left: 0;
+    }
+}
